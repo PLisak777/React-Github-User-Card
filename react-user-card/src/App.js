@@ -2,8 +2,6 @@ import React from 'react';
 import UserCard from './components/UserCard';
 
 import './App.css';
-import { Card, Icon, Image } from 'semantic-ui-react';
-// import 'semantic-ui';
 
 function App() {
   return (
