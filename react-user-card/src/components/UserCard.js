@@ -22,7 +22,7 @@ class UserCard extends React.Component {
                 location: json.location,
                 followers: json.followers
             })
-        })
+        }) .catch((err) => console.error('Failure to load user', err.message));
     }
 
 
