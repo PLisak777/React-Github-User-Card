@@ -1,6 +1,6 @@
 import React from 'react';
 import 'react-dom';
-import 'fomantic-ui';
+// import 'fomantic-ui';
 
 class UserCard extends React.Component {
     state = {
@@ -29,26 +29,21 @@ class UserCard extends React.Component {
 
     render() {
         return (
-            <div className="ui card">
-                <div className="image">
-                <img src={this.state.image} alt='' />
+            <aside className="card">
+                <header>
+                    <a href='https://github.com/PLisak777'>
+                        <img src={this.state.image} alt='avatar' />
+                    </a>
+                    <h1>{this.state.username}</h1>
+                    <h2>{this.state.description}</h2>
+                    <h4>{this.state.followers} Followers.</h4>
+                </header>
+                <div className='bio'>
+                    <p>Hi there!</p>
+                    <p>I am a {this.state.description} living in {this.state.location}, on my way to becoming a full stack web developer. I primarily work with HTML, CSS, and JavaScript</p>
+                    
                 </div>
-            <div className="content">
-                <header className="header">{this.state.username}</header>
-            <div className="meta">
-                <span className="date">Joined in 2020</span>
-            </div>
-                <div className="description">
-                {this.state.username} is a {this.state.description} living in {this.state.location}.
-                </div>
-            </div>
-            <div className="extra content">
-                <footer>
-                <i className="user icon"></i>
-                {this.state.followers} Followers
-                </footer>
-            </div>
-            </div>
+            </aside>
         )
     }
 }

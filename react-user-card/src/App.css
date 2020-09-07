@@ -1,55 +1,110 @@
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
-
-/* GLOBAL */
-html {
-  box-sizing: border-box;
-  font-size: 62.5%; 
-}
+@import url(https://fonts.googleapis.com/css?family=Roboto);
 
 body {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  padding: 6rem;
-  background-color: #f5f5f5;
-  font-family: "Inter", sans-serif;
-  
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: Roboto, Helvetica, Arial, serif;
+  background: url(http://www.hdwallsource.com/img/2014/10/blurred-36379-37207-hd-wallpapers.jpg);
+  background-size: cover;
 }
 
-.App {
-  text-align: center;
+header img {
+  border-radius: 50%;
+  margin: 20px auto;
+  display: block;
+  width: 200px;
+  border: 5px solid #fff;
 }
 
-
-.card {
-    font-size: 1.5rem;
-    letter-spacing: .1rem;
-    line-height: 1.7;
-    color: darken($color-text, 1%);
-    margin-bottom: 2.5rem;
+aside {
+  border-top: 0px solid #26A69A;
+  border-bottom: 0px solid #00695C;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+  height: 250px;
+  width: 250px;
+  background: url(https://s-media-cache-ak0.pinimg.com/736x/3a/1f/02/3a1f02c10700daa80655a302c5a27acf.jpg);
+  background-size: cover;
+  overflow: hidden;
+  box-shadow: 0 0 100px 10px #fff;
+  transition: all ease 0.3s;
 }
 
-.card img {
-    display: block;
-    width: 100%;
-    height: 18rem;
-    object-fit: cover;
-  }
+aside:hover {
+  border-top: 4px solid #26A69A;
+  border-bottom: 4px solid #00695C;
+  border-radius: 5px;
+  height: 480px;
+  width: 350px;
+  box-shadow: 0 0 70px 10px #fff;
+}
 
-.content {
-  padding: 3rem 3rem;
+aside:hover header img {
+  animation: profile_image 2000ms linear both;
+  animation-delay: 0.5s;
 }
 
 header {
-  font-size: 3rem;
-  font-weight: 500;
-  color: #0d0d0d;
-  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
+header h1 {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+  font-size: 25px;
+  line-height: 25px;
+  display: inline-block;
+  padding: 10px;
+  transition: all ease 0.250s;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+aside:hover header h1 {
+  margin-top: 0px;
+  outline: 0 solid #fff;
+  border-top: 0px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+header h2 {
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+  font-size: 17px;
+  font-weight: normal;
+  line-height: 0px;
+  margin: 0;
+}
+
+header h4 {
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+  font-size: 17px;
+  font-weight: normal;
+  line-height: 50px;
+  margin: 0;
+}
+
+.bio {
+  margin-top: 20px;
+  padding: 1px 20px 10px 20px !important;
+  transition: all linear 1.5s;
+  color: #fff;
+  font-size: 14px;
+  opacity: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.42) 49%, rgba(0, 0, 0, 0.61) 100%);
+}
+
+aside:hover .bio {
+  opacity: 1;
+}
+
+.bio p:first-child {
+  text-align: center;
+  font-size: 16px;
+}
